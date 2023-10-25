@@ -1133,7 +1133,7 @@ select option {
     height: 6rem;
     width: 4.7rem;
     top: 7.3rem;
-    right: 3.6rem;
+    right: 2.8rem;
   }
   .carousel__quote h3 {
     margin-top: 15.2rem;
@@ -1317,6 +1317,12 @@ select option {
   }
   .organize__row__box {
     width: 100%;
+  }
+  .organize__text__col > *:first-child {
+    margin-bottom: 3.2rem;
+  }
+  .organize__text__col > *:last-child {
+    margin-top: 4rem;
   }
 }
 @media (min-width: 480px) and (max-width: 768px) {
