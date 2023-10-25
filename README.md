@@ -33,3 +33,7 @@ http://localhost:8080/dist
 You can also access the live demo of this application on GitHub Pages at the following URL:
 
 [Live Demo](https://hassannasir1.github.io/spiralyze-test/dist/)
+
+## Github Repo Link
+
+https://github.com/HassanNasir1/spiralyze-test
