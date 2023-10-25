@@ -36,4 +36,4 @@ You can also access the live demo of this application on GitHub Pages at the fol
 
 ## Github Repo Link
 
-https://github.com/HassanNasir1/spiralyze-test
+<https://github.com/HassanNasir1/spiralyze-test>
