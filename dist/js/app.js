@@ -469,18 +469,54 @@ window.onclick = (e) => {
 
 // Carousel initialization Using Swiper.js //
 // ------------------------------------------------------------------------- //
-var swiper = new Swiper(".mySwiper", {
-  loop: true,
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-  pagination: {
-    el: ".swiper-pagination",
-    type: "bullets",
-    clickable: true,
-  },
-  autoplay: {
-    delay: 5000,
-  },
+// var swiper = new Swiper(".mySwiper", {
+//   loop: true,
+//   navigation: {
+//     nextEl: ".swiper-button-next",
+//     prevEl: ".swiper-button-prev",
+//   },
+//   pagination: {
+//     el: ".swiper-pagination",
+//     type: "bullets",
+//     clickable: true,
+//   },
+//   autoplay: {
+//     delay: 5000,
+//   },
+// });
+
+document.addEventListener("DOMContentLoaded", function () {
+  const slides = document.querySelectorAll(".swiper-slide");
+  let currentIndex = 0;
+  console.log(slides);
+  function showSlide(index) {
+    slides.forEach((slide, i) => {
+      if (i === index) {
+        slide.style.display = "flex"; // or 'block', depending on your layout
+      } else {
+        slide.style.display = "none";
+      }
+    });
+  }
+
+  function nextSlide() {
+    currentIndex = (currentIndex + 1) % slides.length;
+    showSlide(currentIndex);
+    console.log(currentIndex);
+  }
+
+  function prevSlide() {
+    currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+    showSlide(currentIndex);
+    console.log(currentIndex);
+  }
+
+  const nextBtn = document.querySelector(".swiper-button-next");
+  const prevBtn = document.querySelector(".swiper-button-prev");
+
+  nextBtn.addEventListener("click", nextSlide);
+  prevBtn.addEventListener("click", prevSlide);
+
+  // Show the initial slide
+  showSlide(currentIndex);
 });
