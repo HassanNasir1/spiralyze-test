@@ -488,7 +488,7 @@ window.onclick = (e) => {
 document.addEventListener("DOMContentLoaded", function () {
   const slides = document.querySelectorAll(".swiper-slide");
   let currentIndex = 0;
-  console.log(slides);
+
   function showSlide(index) {
     slides.forEach((slide, i) => {
       if (i === index) {
@@ -497,18 +497,26 @@ document.addEventListener("DOMContentLoaded", function () {
         slide.style.display = "none";
       }
     });
+    updatePagination(index);
   }
 
   function nextSlide() {
     currentIndex = (currentIndex + 1) % slides.length;
     showSlide(currentIndex);
-    console.log(currentIndex);
   }
 
   function prevSlide() {
     currentIndex = (currentIndex - 1 + slides.length) % slides.length;
     showSlide(currentIndex);
-    console.log(currentIndex);
+  }
+
+  function updatePagination(index) {
+    const paginationBullets = document.querySelectorAll(
+      ".swiper-pagination-bullet"
+    );
+    paginationBullets.forEach((bullet, i) => {
+      bullet.classList.toggle("swiper-pagination-bullet-active", i === index);
+    });
   }
 
   const nextBtn = document.querySelector(".swiper-button-next");
