@@ -1031,6 +1031,7 @@ select option {
 }
 .swiper-pagination {
   bottom: 0rem;
+  margin-left: 66rem;
 }
 .swiper-pagination > *:not(:last-child) {
   margin-right: 3.6rem !important;
@@ -1050,6 +1051,9 @@ select option {
     margin-top: 8rem;
     padding-bottom: 12.8rem;
   }
+  .swiper-pagination {
+    margin-left: 10rem;
+  }
   .swiper-button-prev,
   .swiper-button-next {
     display: none;
@@ -1059,6 +1063,9 @@ select option {
   .swiper {
     margin-top: -7.1rem;
     height: 31.9rem;
+  }
+  .swiper-pagination {
+    margin-left: 32.4rem;
   }
   .swiper-button-prev,
   .swiper-button-next {
