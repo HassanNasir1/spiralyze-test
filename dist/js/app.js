@@ -467,7 +467,7 @@ window.onclick = (e) => {
   }
 };
 
-// Carousel initialization Using Swiper.js //
+// Replaced Swiper library with custom plain javascript
 // ------------------------------------------------------------------------- //
 // var swiper = new Swiper(".mySwiper", {
 //   loop: true,
